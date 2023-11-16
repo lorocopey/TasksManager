@@ -1,7 +1,7 @@
-function TodoCounter({ total, completed }) {
+function TodoCounter({ message }) {
   return (
-    <h1>
-      Haz completado {completed} de {total} de tus tareas
+    <h1 className='counter'>
+      {message}
     </h1>
   );
 }

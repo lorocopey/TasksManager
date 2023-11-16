@@ -1,11 +1,13 @@
 function TodoItem(props) {
-    return (
-      <li>
-        <span>{props.completed}</span>
-        <p>{props.task}</p>
-        <span>X</span>
-      </li>
-    );
-  }
+  return (
+    <li>
+      <button  onClick={props.onComplete} className={`complete ${props.completed ? "complete--complete" : ""}`}>
+        &#10003;
+      </button>
+      <span>{props.task}</span>
+      <button onClick={props.onDelete} className="delete"> <img src="/trash.png" alt="trash" /> </button>
+    </li>
+  );
+}
 
-  export {TodoItem}
+export { TodoItem };

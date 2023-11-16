@@ -1,0 +1,163 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom right, #64dfcb, #4e84e2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  background-color: transparent; /* Se asegura de que no haya fondo en el contenedor principal */
+  box-shadow: none; /* Remueve la sombra del contenedor principal si deseas que solo las secciones tengan sombra */
+  padding: 0; /* Remueve el padding si es necesario */
+  /* Resto de tus estilos... */
+  width: 350px; /* Aumentado para acomodar botones */
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.header,
+.footer {
+  background-color: rgba(255, 255, 255, 0.8); /* Un blanco con transparencia */
+  border-radius: 8px; /* Para bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+  margin: 10px 0; /* Espacio fuera del contenedor */
+  padding: 20px; /* Espacio dentro del contenedor */
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.new-todo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.new-todo input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  width: calc(
+    100% - 50px
+  ); /* Ajusta el ancho del input para que deje espacio para el botón más ancho */
+}
+
+.new-button {
+  background-color: #5fbae9;
+  border: none;
+  border-radius: 100%;
+  color: white;
+  width: 48px;
+  height: 48px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.new-button:hover{
+  background-color: #0c9ce4;
+  box-shadow: 0 0 4px #333;
+}
+
+.todo-list {
+  background-color: rgba(255, 255, 255, 0.8); /* Un blanco con transparencia */
+  border-radius: 8px; /* Opcional: para bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+  padding: 10px; /* Espacio dentro del contenedor */
+  margin: 10px 0; /* Espacio fuera del contenedor */
+}
+
+.todo-list li {
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  display: flex;
+  align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+
+.complete {
+  background-color: #ecf0ed;
+  border: none;
+  border-radius: 50%;
+  color: rgb(70, 69, 69);
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px; 
+  margin-right: 10px;
+}
+
+.complete:hover{
+  background-color: rgb(108, 223, 108);
+  box-shadow: 0 0 4px #333;
+}
+
+.complete--complete{
+  background-color: rgb(108, 223, 108);
+}
+
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px; /* Añadido para separar del texto */
+}
+
+.delete img{
+  width: 24px;
+  border-radius: 100%;
+  padding: 3px;
+  background-color: #f3f3f3;
+}
+
+.delete img:hover{
+  background-color: #0c9ce4;
+  box-shadow: 0 0 4px #333;
+}
+
+.delete::before {
+  color: red;
+  font-size: 16px; /* O el tamaño que prefieras */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.footer span {
+  color: #333;
+}
+
+.footer .clear-all {
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+input:focus {
+  outline-color: rgb(135, 135, 138);
+  outline-style:solid;
+}
