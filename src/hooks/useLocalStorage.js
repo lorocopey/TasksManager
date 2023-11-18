@@ -36,3 +36,15 @@ function useLocalStorage(itemName, initialvalue) {
 }
 
 export { useLocalStorage };
+
+
+/* const defaultTodos = [
+  { id: 0, task: "tarea 1", completed: true },
+  { id: 1, task: "tarea 2", completed: true },
+  { id: 2, task: "tarea 3", completed: false },
+  { id: 3, task: "tarea 4", completed: false },
+  { id: 4, task: "tarea 5", completed: false },
+]; 
+
+localStorage.setItem('todoAppV1',JSON.stringify(defaultTodos));*/
+//localStorage.removeItem('todoAppV1');

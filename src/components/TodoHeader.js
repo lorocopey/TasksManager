@@ -1,7 +1,8 @@
 import React from "react";
+import { todoContext } from "../Contexts/todoContext";
 
-function TodoHeader({searchValue,setSearchValue}) {
-  
+function TodoHeader() {
+  const { searchValue, setSearchValue } = React.useContext(todoContext);
   return (
     <div className="header">
       <h1>Todo App</h1>
