@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/lorocopey/TasksManager/static/css/main.bedda79b.css",
-    "main.js": "/lorocopey/TasksManager/static/js/main.ec80d715.js",
-    "index.html": "/lorocopey/TasksManager/index.html",
-    "main.bedda79b.css.map": "/lorocopey/TasksManager/static/css/main.bedda79b.css.map",
-    "main.ec80d715.js.map": "/lorocopey/TasksManager/static/js/main.ec80d715.js.map"
+    "main.css": "/TasksManager/static/css/main.bedda79b.css",
+    "main.js": "/TasksManager/static/js/main.ec80d715.js",
+    "index.html": "/TasksManager/index.html",
+    "main.bedda79b.css.map": "/TasksManager/static/css/main.bedda79b.css.map",
+    "main.ec80d715.js.map": "/TasksManager/static/js/main.ec80d715.js.map"
   },
   "entrypoints": [
     "static/css/main.bedda79b.css",
