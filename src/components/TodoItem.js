@@ -1,3 +1,5 @@
+import {Trash} from './Trash'
+
 function TodoItem(props) {
   return (
     <li>
@@ -5,7 +7,7 @@ function TodoItem(props) {
         &#10003;
       </button>
       <span>{props.task}</span>
-      <button onClick={props.onDelete} className="delete"> <img src="/trash.png" alt="trash" /> </button>
+      <button onClick={props.onDelete} className="delete"> <Trash/> </button>
     </li>
   );
 }
