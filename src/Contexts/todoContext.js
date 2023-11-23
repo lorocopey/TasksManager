@@ -37,6 +37,33 @@ function TodoProvider({ children }) {
     saveTodos(newTodos);
   };
 
+  const addTodo = (task) => {
+    try {
+      var newTodos = [...todos];
+      //console.log(newTodos)
+      // tengo que encontrar el ultimo id de los elementos guardados
+      var lastElement = newTodos.reduce(function (
+        objetoConMaxID,
+        objetoActual
+      ) {
+        return objetoActual.id > objetoConMaxID.id
+          ? objetoActual
+          : objetoConMaxID;
+      },
+      newTodos[0]);
+
+      if (!lastElement) {
+        newTodos.push({ id: 1, task: task, completed: false });
+        saveTodos(newTodos);
+      } else {
+        newTodos.push({ id: lastElement.id + 1, task: task, completed: false });
+        saveTodos(newTodos);
+      }
+    } catch (error) {
+      Error(error);
+    }
+  };
+
   return (
     <todoContext.Provider
       value={{
@@ -44,13 +71,14 @@ function TodoProvider({ children }) {
         setSearchValue,
         searchedTodos,
         completeTodo,
+        addTodo,
         deleteTodo,
         completedTodos,
         totalTodos,
         loading,
         error,
         openModal,
-        setOpenModal
+        setOpenModal,
       }}
     >
       {children}

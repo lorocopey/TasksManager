@@ -50,7 +50,7 @@ body {
   padding: 10px;
   width: calc(
     100% - 50px
-  ); /* Ajusta el ancho del input para que deje espacio para el botón más ancho */
+  );
 }
 
 .new-button {

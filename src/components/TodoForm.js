@@ -4,10 +4,10 @@ import { todoContext } from "../Contexts/todoContext";
 import "../css/todoform.css";
 
 function TodoForm() {
-  const { openModal, setOpenModal } = React.useContext(todoContext);
+  const { openModal, setOpenModal,addTodo } = React.useContext(todoContext);
   return (
-    <div class="overlay">
-      <div class="contenedor">
+    <div className="overlay">
+      <div className="contenedor">
         <button
           onClick={() => {
             openModal === false ? setOpenModal(true) : setOpenModal(false);
@@ -16,8 +16,15 @@ function TodoForm() {
         >
           X
         </button>
-        <h1>Mi Div en el Centro</h1>
-        <p>Este es un contenido de ejemplo en el div centrado.</p>
+        <form onSubmit={(event)=>{
+          event.preventDefault();
+          addTodo(event.target.task.value)
+          setOpenModal(false);
+        }}>
+          <h4>Add new task</h4>
+          <input className="input-task" name="task" type="text" placeholder="Task name" />
+          <button type="submit" className="save-task"> Save </button>
+        </form>
       </div>
     </div>
   );

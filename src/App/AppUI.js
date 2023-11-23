@@ -10,7 +10,7 @@ import "../css/main.css";
 import React from "react";
 
 function AppUI() {
-  const { loading, error, searchedTodos, completeTodo, deleteTodo, openModal } =
+  const { loading, error, searchedTodos, completeTodo, deleteTodo } =
     React.useContext(todoContext);
   return (
     <>
