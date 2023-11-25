@@ -75,6 +75,9 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
   padding: 10px; /* Espacio dentro del contenedor */
   margin: 10px 0; /* Espacio fuera del contenedor */
+  min-height: 600px;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 .todo-list li {
@@ -161,3 +164,17 @@ input:focus {
   outline-color: rgb(135, 135, 138);
   outline-style:solid;
 }
+
+/* Cambia el color de fondo y el color del thumb */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #06557c/* Color del thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0c9ce4; /* Color de fondo */
+}
+

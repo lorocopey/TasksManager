@@ -1,10 +1,7 @@
 import React from "react";
-import { todoContext } from "../Contexts/todoContext";
-
 import "../css/todoform.css";
 
-function TodoForm() {
-  const { openModal, setOpenModal,addTodo } = React.useContext(todoContext);
+function TodoForm({ openModal, setOpenModal,addTodo }) {
   return (
     <div className="overlay">
       <div className="contenedor">
